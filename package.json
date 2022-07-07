@@ -8,8 +8,7 @@
     "description": "Creates an JWT using HS256 algorithm",
     "publisher": {
       "name": "João G. C. Melo"
-    },
-    "unlisted": false
+    }
   },
   "dependencies": {
     "jsonwebtoken": "^8.5.1"
