@@ -1,0 +1,10 @@
+{
+  "name": "insomnia-plugin-flexible-jwt",
+  "version": "0.0.1",
+  "private": true,
+  "insomnia": {
+    "name": "flexible-jwt",
+    "description": ""
+  },
+  "main": "main.js"
+}
