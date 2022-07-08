@@ -21,11 +21,10 @@ module.exports.templateTags = [{
 
     async run(context, payload, secret) {
         const header = {
-            algorithm: 'HS256',
+            alg: 'HS256',
             type: 'JWT'
         };
 
         return jwt.sign(payload, secret, { algorithm: 'HS256', header });
     }
-
-}]
+}];
