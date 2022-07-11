@@ -16,13 +16,18 @@ module.exports.templateTags = [{
             type: 'string',
             placeholder: 'Secret',
             defaultValue: ''
+        },
+        {
+            displayName: 'Base64 encoded',
+            type: 'boolean',
+            defaultValue: false
         }
     ],
 
     async run(context, payload, secret, isBase64) {
         return jwt.sign(
             payload,
-            secret,
+            isBase64 ? Buffer.from(secret, 'base64') : secret,
             { 
                 algorithm: 'HS256',
                 header: { typ: 'JWT', alg: 'HS256' }
